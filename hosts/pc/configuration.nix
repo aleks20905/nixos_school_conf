@@ -4,6 +4,7 @@
 
 # sudo nixos-install --flake github:aleks20905/nixos_school_conf#pc --no-root-passwd --extra-config-file /mnt/etc/nixos/hardware-configuration.nix
 
+# sudo nixos-rebuild switch --flake github:aleks20905/nixos_school_conf#pc --impure 
 
 { config, inputs, pkgs, ... }:
 
@@ -40,10 +41,8 @@
   };
 
 	# Bootloader.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub.enable = false;
-  boot.loader.systemd-boot.enable = false;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
 
 	networking.hostName = "host-lab-166"; # Define your hostname.
