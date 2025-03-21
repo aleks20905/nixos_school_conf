@@ -9,8 +9,8 @@
 		home-manager.url = "github:nix-community/home-manager";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-		nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
-		nixos-facter-modules.inputs.nixpkgs.follows = "nixpkgs";
+		# nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
+		# nixos-facter-modules.inputs.nixpkgs.follows = "nixpkgs";
 
 		# spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 		# spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
@@ -54,14 +54,14 @@
 				modules = [ 
 					./hosts/pc/configuration.nix
 
-					nixos-facter-modules.nixosModules.facter
-          {
-            config.facter.reportPath =
-              if builtins.pathExists ./facter.json then
-                ./facter.json
-              else
-                throw "Have you forgotten to run nixos-anywhere with `--generate-hardware-config nixos-facter ./facter.json`?";
-          }
+					# nixos-facter-modules.nixosModules.facter
+          # {
+          #   config.facter.reportPath =
+          #     if builtins.pathExists ./facter.json then
+          #       ./facter.json
+          #     else
+          #       throw "Have you forgotten to run nixos-anywhere with `--generate-hardware-config nixos-facter ./facter.json`?";
+          # }
 
 				];
 			};

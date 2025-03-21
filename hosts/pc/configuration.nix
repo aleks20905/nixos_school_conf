@@ -6,7 +6,13 @@
 
 
 { config, inputs, ... }:
-
+let
+  # Try to import a local hardware configuration if it exists.
+  hwConf =
+    if builtins.pathExists /etc/nixos/hardware-configuration.nix
+    then import /etc/nixos/hardware-configuration.nix
+    else { };
+in
 {
   imports = [ 
     ../common # loads all .nix files in the directory, doesnt add any other folders etc  
