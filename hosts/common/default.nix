@@ -53,10 +53,10 @@
 
     # this is activation scrip it is executed when u do "nixos-rebild" 
     # and print info for packages that were installed, deleted & etc.
-    system.activationScripts.report-changes = ''
-        PATH=$PATH:${lib.makeBinPath [ pkgs.nvd pkgs.nix ]}
-        nvd diff $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2)
-    '';
+    # system.activationScripts.report-changes = ''
+    #     PATH=$PATH:${lib.makeBinPath [ pkgs.nvd pkgs.nix ]}
+    #     nvd diff $(ls -dv /nix/var/nix/profiles/system-*-link | tail -2)
+    # '';
 
     system.stateVersion = "24.11"; # Did you read the comment?
 
