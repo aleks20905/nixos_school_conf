@@ -9,7 +9,7 @@
 		home-manager.url = "github:nix-community/home-manager";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-		nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
+		# nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
 		# nixos-facter-modules.inputs.nixpkgs.follows = "nixpkgs";
 
 		# spicetify-nix.url = "github:Gerg-L/spicetify-nix";
@@ -17,7 +17,7 @@
 
 	};
 
-	outputs = { self, nixpkgs, nixos-facter-modules, ... }@inputs:
+	outputs = { self, nixpkgs,  ... }@inputs:
 	let
 
 		system = "x86_64-linux";
@@ -34,9 +34,9 @@
 					./hosts/pc/configuration.nix
 
 	          # Include the facter module for automatic hardware detection.
-          nixos-facter-modules.nixosModules.facter
+          # nixos-facter-modules.nixosModules.facter
 
-          { config.facter.reportPath = "./facts.json";}
+          # { config.facter.reportPath = "./facter.json";}
 				];
 			};
 

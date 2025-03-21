@@ -24,8 +24,8 @@
 
 
 
-
-    ./hardware-config.nix # import hardware config from hardware-config.nix
+    /etc/nixos/hardware-configuration.nix
+    # ./hardware-config.nix # import hardware config from hardware-config.nix
     ./nixpkg.nix # import nixpkgs from nixpkgs.nix 
     ./service.nix # import services from service.nix
 
@@ -38,6 +38,14 @@
     "student"  = import ./home.nix;
     };
   };
+
+	# Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = false;
+
+	networking.hostName = "pc"; # Define your hostname.
+
 
 	boot.kernelPackages = pkgs.linuxPackages_latest;
  
