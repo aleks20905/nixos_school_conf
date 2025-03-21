@@ -5,11 +5,12 @@
   imports = [ 
     ../common # loads all .nix files in the directory, doesnt add any other folders etc  
     
-    ../common/desktops/plasma6/default.nix
+    # ../common/desktops/plasma6/default.nix
+    ../common/desktops/gnome
 
-    ../common/modules/amd.nix
-    ../common/modules/audio.nix
-    ../common/modules/bluetooth.nix
+    # ../common/modules/amd.nix
+    # ../common/modules/audio.nix
+    # ../common/modules/bluetooth.nix
 
 
 
