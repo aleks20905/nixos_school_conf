@@ -21,9 +21,9 @@
 
         # localsend
 
-        qalculate-qt
+        # qalculate-qt
 
-        qbittorrent
+        # qbittorrent
 
 
         # krita # drawing software 

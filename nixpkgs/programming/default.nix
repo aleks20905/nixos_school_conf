@@ -9,13 +9,15 @@
     environment.systemPackages = with pkgs; [
 
         #------- Programming stuff & Tools -------
-        godot_4
+        # godot_4
 
         sqlite
 
-        python312
+        python314
+        python314Packages.pip
+        python314Packages.virtualenv
 
-        lua
+        # lua
 
         # nodejs_22
         
