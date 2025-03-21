@@ -5,9 +5,9 @@
   imports = [
     ../../homes/student
     # ../../homeManagerModules/common/audio.nix
-    ../../homes/common/applications
-    ../../homes/common/cli
-    ../../homes/common/terminals/kitty.nix
+    # ../../homes/common/applications
+    # ../../homes/common/cli
+    # ../../homes/common/terminals/kitty.nix
   ];
 
 

@@ -17,31 +17,6 @@
 	boot.kernelPackages = pkgs.linuxPackages_zen;
 	# boot.kernelPackages = pkgs.linuxKernel.kernels.linux_zen;
 
-	# boot.kernelParams = [
-	#   "video=HDMI-A-2:1920x1080@144"
-	#   "video=DVI-D-1:1280x1024@60"
-	# ];
-
-	# hardware.gpu.amd.enable = true;
-
-	# hardware.graphics.extraPackages = [
-	#   pkgs.amdvlk
-	# ];
-
-	# # To enable Vulkan support for 32-bit applications, also add:
-	# hardware.graphics.extraPackages32 = [
-	#   pkgs.driversi686Linux.amdvlk
-	# ];
-
-	# Force radv
-	# environment.variables.AMD_VULKAN_ICD = "RADV";
-	# # Or
-	# environment.variables.VK_ICD_FILENAMES =
-	#   "/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json";
-	
-	
-	#  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 	# Bootloader.
 	boot.loader.grub.enable = true;
