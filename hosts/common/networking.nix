@@ -9,6 +9,7 @@
     networking.dhcpcd.enable = false;
 
     networking.nameservers = [
+        "193.30.228.10"
         "1.1.1.1"
         "1.0.0.1"
         "9.9.9.9"

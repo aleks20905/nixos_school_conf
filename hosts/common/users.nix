@@ -4,8 +4,13 @@
     users.users.student = {
         isNormalUser = true;
         description = "student";
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ ];
     };
 
+    users.users.lxadmin = {
+        isNormalUser = true;
+        description = "lxadmin";
+        extraGroups = [ "networkmanager" "wheel" ];
+    };
 
 }
