@@ -1,4 +1,10 @@
 # sudo nixos-rebuild switch  --flake  /home/student/Desktop/nixos#default
+
+# sudo nixos-rebuild switch  --flake  https://github.com/nix-community/nixos-anywhere-examples.git
+
+# sudo nixos-install --flake github:aleks20905/nixos_school_conf#pc --no-root-passwd --extra-config-file /mnt/etc/nixos/hardware-configuration.nix
+
+
 { config, inputs, ... }:
 
 {
@@ -20,7 +26,7 @@
 
 
 
-    ./hardware-config.nix # import hardware config from hardware-config.nix
+    # ./hardware-config.nix # import hardware config from hardware-config.nix
     ./nixpkg.nix # import nixpkgs from nixpkgs.nix 
     ./service.nix # import services from service.nix
 
@@ -34,6 +40,7 @@
     };
   };
 
+	boot.kernelPackages = pkgs.linuxPackages_latest;
  
   # addes partition manager 
   # programs.partition-manager.enable = true;
