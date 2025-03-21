@@ -37,18 +37,22 @@
           # nixos-facter-modules.nixosModules.facter
 
           # { config.facter.reportPath = "./facter.json";}
+					{
+						system.autoUpgrade = {
+							enable = true;
+							flake = self.outPath; # Uses the flake as defined in your repository.
+							flags = [
+								"--no-write-lock-file"
+								"-L" # Print build logs for debugging.
+							];
+							dates = "02:00";
+							randomizedDelaySec = "45min";
+						};
+
+					}
 				];
 
-				system.autoUpgrade = {
-					enable = true;
-					flake = self.outPath; # Uses the flake as defined in your repository.
-					flags = [
-						"--no-write-lock-file"
-						"-L" # Print build logs for debugging.
-					];
-					dates = "02:00";
-					randomizedDelaySec = "45min";
-				};
+				
 
 			};
 
