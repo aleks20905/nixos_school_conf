@@ -5,14 +5,8 @@
 # sudo nixos-install --flake github:aleks20905/nixos_school_conf#pc --no-root-passwd --extra-config-file /mnt/etc/nixos/hardware-configuration.nix
 
 
-{ config, inputs, ... }:
-let
-  # Try to import a local hardware configuration if it exists.
-  hwConf =
-    if builtins.pathExists /etc/nixos/hardware-configuration.nix
-    then import /etc/nixos/hardware-configuration.nix
-    else { };
-in
+{ config, inputs, pkgs, ... }:
+
 {
   imports = [ 
     ../common # loads all .nix files in the directory, doesnt add any other folders etc  
@@ -31,8 +25,7 @@ in
 
 
 
-
-    # ./hardware-config.nix # import hardware config from hardware-config.nix
+    ./hardware-config.nix # import hardware config from hardware-config.nix
     ./nixpkg.nix # import nixpkgs from nixpkgs.nix 
     ./service.nix # import services from service.nix
 

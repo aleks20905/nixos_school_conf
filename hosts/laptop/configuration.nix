@@ -15,7 +15,7 @@
 
 
 
-    ./hardware-config.nix # import hardware config from hardware-config.nix
+    # ./hardware-config.nix # import hardware config from hardware-config.nix
     ./nixpkg.nix # import nixpkgs from nixpkgs.nix 
     ./service.nix # import services from service.nix
 
