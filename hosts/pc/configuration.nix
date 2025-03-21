@@ -42,7 +42,9 @@
 	# Bootloader.
   # boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
-  # boot.loader.grub.enable = false;
+  boot.loader.grub.enable = false;
+  boot.loader.systemd-boot.enable = false;
+
 
 	networking.hostName = "host-lab-166"; # Define your hostname.
 
