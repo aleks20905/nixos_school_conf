@@ -16,7 +16,7 @@
 
         nixpkgs-fmt
 
-        nvd           # Nix/NixOS package version diff tool
+        # nvd           # Nix/NixOS package version diff tool
 
         #------- Console Utilities -------
 
