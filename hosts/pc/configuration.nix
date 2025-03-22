@@ -6,7 +6,7 @@
 
 # sudo nixos-rebuild switch --flake github:aleks20905/nixos_school_conf#pc --impure 
 
-{ config, inputs, pkgs, ... }:
+{ config, inputs, pkgs, lib, ... }:
 
 {
   imports = [ 
@@ -52,7 +52,7 @@
 	networking.hostName = "host-lab-166"; # Define your hostname.
 
 
-	boot.kernelPackages = pkgs.linuxPackages_latest;
+	boot.kernelPackages = pkgs.linuxPackages_6_6;
  
   # addes partition manager 
   # programs.partition-manager.enable = true;
