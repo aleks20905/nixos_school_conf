@@ -26,5 +26,28 @@
         #------- Programming stuff & Tools -------
 
     ];
+# { pkgs ? import <nixpkgs> {
 
+#   config = {
+#     allowUnfree = true;
+#     cudaSupport = true;
+#   };
+# } }:
+ 
+# pkgs.mkShell {
+
+#   buildInputs = [
+#     pkgs.python312
+#   ];
+
+#   env.LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+#     pkgs.stdenv.cc.cc.lib
+#     pkgs.libz
+#     pkgs.stdenv.cc
+#     pkgs.binutils
+#     pkgs.gnupg 
+#     pkgs.glib
+#   ];
+
+# }
 }
