@@ -47,6 +47,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  swapDevices = lib.mkForce [ ];
 
 	networking.hostName = "host-lab-166"; # Define your hostname.
 
