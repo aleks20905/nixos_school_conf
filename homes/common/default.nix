@@ -13,6 +13,8 @@
 
     ];
 
+    home.packages = with pkgs; [ python312 ];
+
     programs.git = {
         enable = true;
 
