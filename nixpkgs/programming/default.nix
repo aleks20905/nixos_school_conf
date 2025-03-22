@@ -14,8 +14,8 @@
         sqlite
 
         python312
-        # python314Packages.pip
-        # python314Packages.virtualenv
+        python312Packages.pip
+        python312Packages.virtualenv
 
         # lua
 
